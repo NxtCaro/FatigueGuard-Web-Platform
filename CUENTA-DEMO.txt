@@ -1,0 +1,7 @@
+Cuenta demo para ingresar directo al dashboard
+
+Correo: admin@fatigueguard.com
+Contrasena: Fatigue123
+
+Nota: este prototipo usa localStorage como base de datos local del navegador.
+Las empresas que registres se guardan en la misma computadora y navegador.
