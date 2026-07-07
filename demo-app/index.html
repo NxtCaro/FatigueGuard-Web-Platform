@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FatigueGuard — Android Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="prototype-info">
+      <p class="eyebrow">SafeDrive · FatigueGuard</p>
+      <h1>Prototipo móvil Android</h1>
+      <p>
+        Flujo interactivo para explicar en video: evaluación inicial, monitoreo,
+        alertas, pausa segura, historial, soporte clínico y configuración.
+      </p>
+      <div class="legend">
+        <span><b class="dot low"></b> Riesgo bajo</span>
+        <span><b class="dot medium"></b> Riesgo medio</span>
+        <span><b class="dot high"></b> Riesgo alto</span>
+      </div>
+      <a class="demo-link" href="#a01">Iniciar demo</a>
+      <p class="hint">Tip: usa los botones dentro del celular para avanzar en el video.</p>
+    </section>
+
+    <section class="prototype" aria-label="Prototipo Android FatigueGuard">
+      <div class="phone-frame">
+        <div class="phone-speaker"></div>
+        <div class="phone-body">
+          <!-- A. Pantallas iniciales -->
+          <article id="a01" class="phone-screen is-default splash-screen">
+            <div class="splash-brand">
+              <div class="brand-mark">FG</div>
+              <h2>FatigueGuard</h2>
+              <p>Conduce alerta, llega seguro</p>
+            </div>
+            <div class="loader"></div>
+            <a class="primary-action" href="#a02">Comenzar</a>
+          </article>
+
+          <article id="a02" class="phone-screen screen-pad">
+            <header class="top-simple">
+              <div class="brand-row"><span class="mini-mark">FG</span><strong>FatigueGuard</strong></div>
+            </header>
+            <section class="center-content">
+              <h2>Bienvenido</h2>
+              <p>Elige cómo deseas ingresar al prototipo.</p>
+              <a class="role-card" href="#c01">
+                <span class="role-icon">🚕</span>
+                <span><b>Soy conductor</b><small>Evaluación, monitoreo y alertas</small></span>
+              </a>
+              <a class="role-card" href="#d01">
+                <span class="role-icon">🩺</span>
+                <span><b>Soy doctor</b><small>Historial clínico y seguimiento</small></span>
+              </a>
+            </section>
+          </article>
+
+          <!-- B. Conductor: onboarding y preparación -->
+          <article id="c01" class="phone-screen screen-pad with-nav">
+            <header class="app-header">
+              <div><small>Inicio</small><h2>Hola, Leonardo</h2></div>
+              <a class="avatar" href="#p01">L</a>
+            </header>
+            <section class="hero-card-app blue-gradient">
+              <p>Antes de conducir, revisemos tu estado.</p>
+              <h3>Evaluación inicial de fatiga</h3>
+              <a class="light-action" href="#c02">Iniciar evaluación</a>
+            </section>
+            <section class="card-grid-two">
+              <div class="metric-card"><b>3</b><span>alertas registradas ayer</span></div>
+              <div class="metric-card"><b>5h</b><span>último sueño reportado</span></div>
+            </section>
+            <div class="info-card"><span>💡</span><p>Recuerda colocar el celular en una zona estable antes de manejar.</p></div>
+            <nav class="bottom-nav"><a class="active" href="#c01">Inicio</a><a href="#c09">Monitoreo</a><a href="#c21">Historial</a><a href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="c02" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c01">‹</a><span>Paso 1 de 5</span></header>
+            <section class="form-section">
+              <h2>¿Cuántas horas dormiste?</h2>
+              <p>Este dato ayuda a mejorar la precisión de la evaluación inicial.</p>
+              <div class="sleep-options">
+                <button>4h</button><button class="selected">5h</button><button>6h</button><button>7h</button><button>8h</button>
+              </div>
+              <label class="field-label">Calidad del sueño</label>
+              <div class="select-field">Regular <span>⌄</span></div>
+              <a class="primary-action bottom" href="#c03">Guardar y continuar</a>
+            </section>
+          </article>
+
+          <article id="c03" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c02">‹</a><span>Paso 2 de 5</span></header>
+            <section class="consent-card">
+              <div class="large-icon">🔐</div>
+              <h2>Consentimiento biométrico</h2>
+              <p>FatigueGuard usará la cámara frontal para detectar signos de fatiga durante la conducción.</p>
+              <ul class="check-list">
+                <li>Uso de cámara frontal.</li>
+                <li>Procesamiento para detectar fatiga.</li>
+                <li>Datos usados para monitoreo y seguimiento.</li>
+              </ul>
+              <a class="primary-action" href="#c04">Aceptar y continuar</a>
+              <a class="text-link" href="#p06">Ver ajustes de privacidad</a>
+            </section>
+          </article>
+
+          <article id="c04" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c03">‹</a><span>Paso 3 de 5</span></header>
+            <section class="guide-visual">
+              <div class="dashboard-phone">📱</div>
+              <h2>Coloca el celular frente a tu rostro</h2>
+              <p>Evita cubrir la cámara y mantén una distancia estable.</p>
+              <div class="tip-list">
+                <span>✓ Buena iluminación</span><span>✓ Cámara libre</span><span>✓ No manipular al conducir</span>
+              </div>
+              <a class="primary-action bottom" href="#c05">Verificar posición</a>
+            </section>
+          </article>
+
+          <article id="c05" class="phone-screen dark-screen">
+            <header class="camera-header"><a href="#c04">‹</a><span>Calibración facial</span></header>
+            <section class="camera-zone">
+              <div class="face-frame"><span>🙂</span></div>
+              <p>Mira al frente para calibrar tu rostro.</p>
+              <a class="primary-action" href="#c06">Iniciar calibración</a>
+            </section>
+          </article>
+
+          <article id="c06" class="phone-screen screen-pad">
+            <section class="success-state">
+              <div class="state-icon success">✓</div>
+              <h2>Rostro detectado correctamente</h2>
+              <p>Ya podemos iniciar la evaluación inicial de fatiga.</p>
+              <a class="primary-action" href="#c07">Continuar</a>
+            </section>
+          </article>
+
+          <article id="c07" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c06">‹</a><span>Resultado inicial</span></header>
+            <section class="risk-result medium-card">
+              <span class="risk-pill medium-bg">Riesgo medio</span>
+              <h2>Nivel inicial de fatiga</h2>
+              <div class="risk-meter"><span></span></div>
+              <p>Puedes iniciar tu jornada con monitoreo activo. Mantente atento a las alertas.</p>
+              <a class="primary-action" href="#c09">Iniciar monitoreo</a>
+              <a class="secondary-action" href="#c08">Ver caso de riesgo alto</a>
+            </section>
+          </article>
+
+          <article id="c08" class="phone-screen screen-pad high-alert-screen">
+            <section class="alert-main">
+              <div class="state-icon danger">!</div>
+              <h2>Riesgo alto de fatiga</h2>
+              <p>No se recomienda iniciar conducción sin descansar.</p>
+              <a class="primary-danger" href="#c18">Iniciar pausa</a>
+              <a class="secondary-danger" href="#c09">Continuar bajo mi responsabilidad</a>
+            </section>
+          </article>
+
+          <!-- C. Conductor: monitoreo -->
+          <article id="c09" class="phone-screen screen-pad with-nav">
+            <header class="app-header">
+              <div><small>Monitoreo</small><h2>Monitoreo activo</h2></div>
+              <span class="status-dot good"></span>
+            </header>
+            <section class="camera-card">
+              <div class="face-live">🙂</div>
+              <span class="monitor-pill">Todo bien</span>
+            </section>
+            <section class="card-grid-three">
+              <div><b>Bajo</b><small>Nivel actual</small></div><div><b>35m</b><small>Tiempo</small></div><div><b>0</b><small>Alertas hoy</small></div>
+            </section>
+            <a class="secondary-action" href="#c10">Simular fatiga</a>
+            <nav class="bottom-nav"><a href="#c01">Inicio</a><a class="active" href="#c09">Monitoreo</a><a href="#c21">Historial</a><a href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="c10" class="phone-screen screen-pad warning-screen">
+            <section class="event-state">
+              <div class="event-icon">👁️</div>
+              <h2>Cierre prolongado de ojos detectado</h2>
+              <p>Puede ser señal de microsueño. Mantente atento.</p>
+              <a class="warning-action" href="#c11">Entendido</a>
+            </section>
+          </article>
+
+          <article id="c11" class="phone-screen screen-pad warning-screen">
+            <section class="event-state">
+              <div class="event-icon">🥱</div>
+              <h2>Bostezos frecuentes detectados</h2>
+              <p>Tu nivel de fatiga está aumentando.</p>
+              <a class="warning-action" href="#c12">Continuar monitoreo</a>
+            </section>
+          </article>
+
+          <article id="c12" class="phone-screen screen-pad high-alert-screen">
+            <section class="event-state">
+              <div class="event-icon">😴</div>
+              <h2>Cabeceo detectado</h2>
+              <p>Riesgo alto de somnolencia durante la conducción.</p>
+              <a class="primary-danger" href="#c14">Buscar pausa segura</a>
+              <a class="secondary-danger" href="#c13">Ver error de cámara</a>
+            </section>
+          </article>
+
+          <article id="c13" class="phone-screen screen-pad">
+            <section class="empty-state">
+              <div class="large-icon">📷</div>
+              <h2>No podemos ver tu rostro</h2>
+              <p>Limpia o ajusta la cámara para continuar el monitoreo.</p>
+              <a class="primary-action" href="#c09">Reintentar</a>
+            </section>
+          </article>
+
+          <!-- D. Conductor: alertas y pausa -->
+          <article id="c14" class="phone-screen screen-pad alert-red">
+            <section class="alert-main">
+              <h2>Alerta de fatiga</h2>
+              <p>Se detectaron señales de cansancio.</p>
+              <a class="primary-danger" href="#c15">Ver recomendación</a>
+            </section>
+          </article>
+
+          <article id="c15" class="phone-screen screen-pad">
+            <section class="alert-channel-card">
+              <div class="channel-icons"><span>🔊</span><span>📳</span></div>
+              <h2>Alerta sonora y vibración activadas</h2>
+              <p>Responde a la alerta para continuar seguro.</p>
+              <a class="primary-action" href="#c16">Estoy atento</a>
+            </section>
+          </article>
+
+          <article id="c16" class="phone-screen screen-pad high-alert-screen">
+            <section class="alert-main">
+              <div class="state-icon danger">!</div>
+              <h2>Riesgo crítico</h2>
+              <p>Ignoraste una alerta anterior y el riesgo continúa.</p>
+              <a class="primary-danger" href="#c17">Detenerme ahora</a>
+              <a class="secondary-danger" href="#c09">Continuar bajo riesgo</a>
+            </section>
+          </article>
+
+          <article id="c17" class="phone-screen screen-pad">
+            <section class="safe-break-card">
+              <span class="risk-pill high-bg">Pausa recomendada</span>
+              <h2>Busca un lugar seguro</h2>
+              <p>Detente unos minutos antes de continuar.</p>
+              <ul class="check-list compact"><li>Oríllate en zona segura.</li><li>Activa luces de emergencia.</li><li>Descansa antes de retomar.</li></ul>
+              <a class="primary-action" href="#c18">Iniciar pausa guiada</a>
+            </section>
+          </article>
+
+          <article id="c18" class="phone-screen screen-pad">
+            <section class="timer-card">
+              <h2>Pausa guiada</h2>
+              <div class="timer-ring"><span>05:00</span></div>
+              <p>Respira, descansa y evita usar el celular.</p>
+              <a class="primary-action" href="#c19">Finalizar pausa</a>
+            </section>
+          </article>
+
+          <article id="c19" class="phone-screen screen-pad">
+            <section class="confirm-card">
+              <h2>¿Deseas continuar manejando?</h2>
+              <p>Recomendamos continuar solo si te sientes recuperado.</p>
+              <a class="primary-action" href="#c09">Reanudar monitoreo</a>
+              <a class="secondary-action" href="#c18">Descansar más tiempo</a>
+            </section>
+          </article>
+
+          <!-- E. Conductor: historial -->
+          <article id="c20" class="phone-screen screen-pad with-nav">
+            <header class="app-header"><div><small>Cierre</small><h2>Resumen de jornada</h2></div></header>
+            <section class="summary-card">
+              <div class="summary-row"><span>Alertas totales</span><b>4</b></div>
+              <div class="summary-row"><span>Riesgo máximo</span><b class="red-text">Alto</b></div>
+              <div class="summary-row"><span>Tiempo monitoreado</span><b>5h 20m</b></div>
+            </section>
+            <a class="primary-action" href="#c21">Ver historial completo</a>
+            <nav class="bottom-nav"><a href="#c01">Inicio</a><a href="#c09">Monitoreo</a><a class="active" href="#c21">Historial</a><a href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="c21" class="phone-screen screen-pad with-nav">
+            <header class="app-header"><div><small>Historial</small><h2>Eventos de hoy</h2></div><a class="filter-chip" href="#c23">Filtrar</a></header>
+            <section class="event-list">
+              <a href="#c22" class="event-row high"><b>11:10</b><span>Cierre de ojos</span><small>Riesgo alto</small></a>
+              <a href="#c22" class="event-row medium"><b>10:35</b><span>Bostezos frecuentes</span><small>Riesgo medio</small></a>
+              <a href="#c22" class="event-row low"><b>12:05</b><span>Pausa realizada</span><small>Recuperado</small></a>
+            </section>
+            <a class="secondary-action" href="#c20">Ver resumen</a>
+            <nav class="bottom-nav"><a href="#c01">Inicio</a><a href="#c09">Monitoreo</a><a class="active" href="#c21">Historial</a><a href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="c22" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c21">‹</a><span>Detalle de evento</span></header>
+            <section class="detail-card">
+              <span class="risk-pill high-bg">Riesgo alto</span>
+              <h2>Cierre prolongado de ojos</h2>
+              <p>Hora: 11:10 p.m.</p>
+              <p>Acción tomada: <b>Alerta atendida</b></p>
+              <p>Recomendación: realizar pausas antes de continuar.</p>
+              <a class="primary-action" href="#p03">Ver por qué se generó</a>
+            </section>
+          </article>
+
+          <article id="c23" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c21">‹</a><span>Horarios críticos</span></header>
+            <section class="chart-card">
+              <h2>Mayor fatiga detectada</h2>
+              <div class="bar-chart"><span style="height:25%"></span><span style="height:45%"></span><span style="height:80%"></span><span style="height:70%"></span><span style="height:35%"></span></div>
+              <p>Mayor riesgo entre 11:00 p.m. y 2:00 a.m.</p>
+              <a class="primary-action" href="#c24">Ver sueño vs alertas</a>
+            </section>
+          </article>
+
+          <article id="c24" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c23">‹</a><span>Sueño vs alertas</span></header>
+            <section class="analysis-card">
+              <div class="card-grid-two"><div class="metric-card"><b>5h</b><span>Dormidas</span></div><div class="metric-card"><b>4</b><span>Alertas</span></div></div>
+              <p>Dormir menos de 6 horas aumentó tus alertas en esta jornada.</p>
+              <a class="primary-action" href="#c25">Ver comparación semanal</a>
+            </section>
+          </article>
+
+          <article id="c25" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c24">‹</a><span>Comparación semanal</span></header>
+            <section class="chart-card">
+              <h2>Progreso semanal</h2>
+              <div class="week-bars"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+              <p>Esta semana redujiste 2 alertas respecto a la anterior.</p>
+              <a class="primary-action" href="#c26">Ver recomendaciones</a>
+            </section>
+          </article>
+
+          <article id="c26" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c25">‹</a><span>Recomendaciones</span></header>
+            <section class="tips-section">
+              <h2>Recomendaciones personalizadas</h2>
+              <div class="tip-card">Duerme al menos 7 horas antes de jornadas largas.</div>
+              <div class="tip-card">Evita manejar más de 4 horas seguidas.</div>
+              <div class="tip-card">Programa pausas preventivas en horarios críticos.</div>
+              <a class="primary-action" href="#c27">Compartir con doctor</a>
+            </section>
+          </article>
+
+          <article id="c27" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#c26">‹</a><span>Compartir historial</span></header>
+            <section class="share-card">
+              <div class="large-icon">🩺</div>
+              <h2>Comparte tu historial con un doctor</h2>
+              <div class="option-list"><label><input type="radio" checked> Última jornada</label><label><input type="radio"> Última semana</label><label><input type="radio"> Último mes</label></div>
+              <a class="primary-action" href="#d04">Autorizar y compartir</a>
+            </section>
+          </article>
+
+          <!-- F. Doctor -->
+          <article id="d01" class="phone-screen screen-pad with-nav">
+            <header class="app-header"><div><small>Doctor</small><h2>Hola, Dr. Kevin</h2></div><a class="avatar" href="#a02">K</a></header>
+            <section class="hero-card-app blue-gradient"><p>Pacientes con historial compartido</p><h3>3 pacientes con riesgo alto reciente</h3><a class="light-action" href="#d02">Ver pacientes</a></section>
+            <div class="info-card"><span>📊</span><p>Usa FatigueGuard como apoyo complementario, no como reemplazo del criterio médico.</p></div>
+            <nav class="bottom-nav"><a class="active" href="#d01">Inicio</a><a href="#d02">Pacientes</a><a href="#d06">Análisis</a><a href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="d02" class="phone-screen screen-pad with-nav">
+            <header class="app-header"><div><small>Pacientes</small><h2>Lista de pacientes</h2></div></header>
+            <div class="search-field">Buscar paciente...</div>
+            <section class="patient-list">
+              <a href="#d03" class="patient-row"><b>Leonardo Huayanca</b><span class="risk-pill high-bg">Alto</span><small>Última alerta: ayer</small></a>
+              <a href="#d03" class="patient-row"><b>Fabricio Tello</b><span class="risk-pill medium-bg">Medio</span><small>Última alerta: hace 3 días</small></a>
+            </section>
+            <nav class="bottom-nav"><a href="#d01">Inicio</a><a class="active" href="#d02">Pacientes</a><a href="#d06">Análisis</a><a href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="d03" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#d02">‹</a><span>Datos clínicos</span></header>
+            <section class="form-section">
+              <h2>Leonardo Huayanca</h2>
+              <div class="input-card">Edad: 20 años</div><div class="input-card">Sueño promedio: 5 horas</div><div class="input-card">Medicación: no reportada</div><div class="input-card">Antecedentes: en evaluación</div>
+              <a class="primary-action" href="#d04">Guardar datos</a>
+            </section>
+          </article>
+
+          <article id="d04" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#d03">‹</a><span>Historial del paciente</span></header>
+            <section class="detail-card">
+              <span class="risk-pill high-bg">Riesgo alto reciente</span>
+              <h2>Historial de fatiga</h2>
+              <p>4 eventos en la última jornada. Mayor incidencia en horario nocturno.</p>
+              <a class="primary-action" href="#d05">Filtrar eventos</a>
+              <a class="secondary-action" href="#d06">Ver dashboard clínico</a>
+            </section>
+          </article>
+
+          <article id="d05" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#d04">‹</a><span>Filtros de eventos</span></header>
+            <section class="form-section">
+              <h2>Filtrar información</h2>
+              <div class="input-card">Fecha: 12/05/2026</div><div class="input-card">Horario: 10 p.m. - 2 a.m.</div><div class="input-card">Tipo: Cierre de ojos / cabeceo</div>
+              <a class="primary-action" href="#d06">Aplicar filtros</a>
+            </section>
+          </article>
+
+          <article id="d06" class="phone-screen screen-pad with-nav">
+            <header class="app-header"><div><small>Análisis</small><h2>Dashboard clínico</h2></div></header>
+            <section class="card-grid-two"><div class="metric-card"><b>5h</b><span>Sueño reportado</span></div><div class="metric-card"><b>Alto</b><span>Riesgo</span></div></section>
+            <section class="chart-card compact-chart"><h3>Sueño, síntomas y alertas</h3><div class="bar-chart"><span style="height:40%"></span><span style="height:80%"></span><span style="height:65%"></span></div></section>
+            <a class="primary-action" href="#d07">Ver patrones</a>
+            <nav class="bottom-nav"><a href="#d01">Inicio</a><a href="#d02">Pacientes</a><a class="active" href="#d06">Análisis</a><a href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="d07" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#d06">‹</a><span>Patrones recurrentes</span></header>
+            <section class="analysis-card">
+              <h2>Patrón detectado</h2>
+              <p>Fatiga alta en turnos nocturnos y tras dormir menos de 6 horas.</p>
+              <a class="primary-action" href="#d08">Agregar observación</a>
+            </section>
+          </article>
+
+          <article id="d08" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#d07">‹</a><span>Observación clínica</span></header>
+            <section class="form-section">
+              <h2>Nueva observación</h2>
+              <div class="textarea-card">Escriba una observación clínica...</div>
+              <a class="primary-action" href="#d09">Guardar observación</a>
+            </section>
+          </article>
+
+          <article id="d09" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#d08">‹</a><span>Recomendación médica</span></header>
+            <section class="form-section">
+              <h2>Registrar recomendación</h2>
+              <div class="option-list"><label><input type="checkbox" checked> Seguimiento</label><label><input type="checkbox"> Evaluación de sueño</label><label><input type="checkbox"> Derivación</label></div>
+              <a class="primary-action" href="#d10">Registrar recomendación</a>
+            </section>
+          </article>
+
+          <article id="d10" class="phone-screen screen-pad">
+            <section class="success-state">
+              <div class="state-icon success">✓</div>
+              <h2>Recomendación compartida</h2>
+              <p>El paciente podrá revisar las indicaciones desde su app.</p>
+              <a class="primary-action" href="#d11">Ver evolución</a>
+            </section>
+          </article>
+
+          <article id="d11" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#d10">‹</a><span>Evolución</span></header>
+            <section class="analysis-card">
+              <h2>Comparación entre consultas</h2>
+              <div class="comparison"><div><small>Anterior</small><b>Alto</b></div><div><small>Actual</small><b>Medio</b></div></div>
+              <p>Se observa mejora tras reducir turnos nocturnos continuos.</p>
+              <a class="primary-action" href="#a02">Finalizar demo</a>
+            </section>
+          </article>
+
+          <!-- G. Configuración, confianza y accesibilidad -->
+          <article id="p01" class="phone-screen screen-pad with-nav">
+            <header class="app-header"><div><small>Perfil</small><h2>Configuración</h2></div></header>
+            <section class="settings-list">
+              <a href="#p02">Tipo de alertas <span>›</span></a>
+              <a href="#p03">Por qué se generó una alerta <span>›</span></a>
+              <a href="#p04">Aprende sobre fatiga <span>›</span></a>
+              <a href="#p05">Reportar falsa alerta <span>›</span></a>
+              <a href="#p06">Accesibilidad y datos <span>›</span></a>
+            </section>
+            <nav class="bottom-nav"><a href="#c01">Inicio</a><a href="#c09">Monitoreo</a><a href="#c21">Historial</a><a class="active" href="#p01">Perfil</a></nav>
+          </article>
+
+          <article id="p02" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#p01">‹</a><span>Configuración de alertas</span></header>
+            <section class="settings-card">
+              <h2>Tipo de alerta</h2>
+              <label class="switch-row">Alerta sonora <input type="checkbox" checked></label>
+              <label class="switch-row">Vibración <input type="checkbox" checked></label>
+              <label class="switch-row">Alerta visual <input type="checkbox" checked></label>
+              <a class="primary-action" href="#p01">Guardar cambios</a>
+            </section>
+          </article>
+
+          <article id="p03" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#p01">‹</a><span>Explicación de alerta</span></header>
+            <section class="detail-card">
+              <h2>¿Por qué se generó?</h2>
+              <p>La alerta se generó por cierre prolongado de ojos y cabeceo.</p>
+              <p>Nivel de confianza: <b>92%</b></p>
+              <a class="primary-action" href="#p01">Entendido</a>
+            </section>
+          </article>
+
+          <article id="p04" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#p01">‹</a><span>Educación</span></header>
+            <section class="tips-section">
+              <h2>Aprende sobre fatiga</h2>
+              <div class="tip-card">¿Qué es un microsueño?</div>
+              <div class="tip-card">¿Cuándo debes detenerte?</div>
+              <div class="tip-card">¿Cuántas horas dormir?</div>
+              <a class="primary-action" href="#p01">Volver</a>
+            </section>
+          </article>
+
+          <article id="p05" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#p01">‹</a><span>Falsa alerta</span></header>
+            <section class="form-section">
+              <h2>¿La alerta fue incorrecta?</h2>
+              <div class="option-list"><label><input type="radio" checked> No estaba cansado</label><label><input type="radio"> La cámara falló</label><label><input type="radio"> Movimiento del vehículo</label></div>
+              <a class="primary-action" href="#p01">Enviar reporte</a>
+            </section>
+          </article>
+
+          <article id="p06" class="phone-screen screen-pad">
+            <header class="step-header"><a href="#p01">‹</a><span>Accesibilidad y datos</span></header>
+            <section class="settings-card">
+              <h2>Ajustes visuales y auditivos</h2>
+              <div class="input-card">Tamaño de texto: Grande</div><div class="input-card">Contraste: Alto</div><div class="input-card">Volumen de alerta: 80%</div><div class="input-card">Intensidad de vibración: Alta</div>
+              <a class="primary-action" href="#p01">Guardar ajustes</a>
+            </section>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
